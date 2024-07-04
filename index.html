@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey.Ag!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero"><b>Home</b></a></li>
+            <li><a href="#products"><b>Products</b></a></li>
+            <li><a href="#about"><b>About Us</b></a></li>
+            <li><a href="#contact"><b>Order</b></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-images">
+                <div class="hero-image-container">
+                    <img src="image1.jpg" alt="Hero Image 1" class="hero-image">
+                </div>
+                <div class="hero-image-container">
+                    <img src="image2.jpg" alt="Hero Image 2" class="hero-image">
+                    <div class="contact-info">
+                        <p>INSTAGRAM : <a href="https://instagram.com/heyagshop?igshid=OGQ5ZDc2ODk2ZA=="> @heyagshop</a></p>
+                        <p>SHOPEE : <a href="https://s.shopee.co.id/LS19DCGby?share_channel_code=1">agnihlmh</a></p>
+                        <a href="#products" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="image3.jpg" alt="Hero Image 3" class="hero-image">
+                </div>
+            </div>
+            <h1>Welcome to Our Online Shop</h1>
+            <p>Manik-Manik Creative Shop: Gelang, Cincin, dan Gantungan Ponsel Menarik!</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h1>Our Products</h1>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Cincin Beads Cherry Set lucu Korean Style Handmade By Hay.Ag!</h3> Rp.7000/3pc
+            <hr>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 2">
+            <h3>Gelang Beads Bracelet Red Deisy Flower Aesthetic By Hay.Ag!</h3> Rp.15000/pc
+            <hr>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 3">
+            <h3>Phone Strap Gantungan Hp Kpop Cute Stray Kids By Hay.Ag!</h3> Rp.10000/pc
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Selamat datang di <B>Hey.Ag!</B> yang penuh kreativitas! Kami adalah tempat yang tepat bagi Anda yang mencari aksesori unik dan berbeda untuk melengkapi gaya Anda. Kami menawarkan berbagai macam gelang, cincin, dan gantungan ponsel yang terbuat dari manik-manik yang cantik dan menarik.
+
+            Kami percaya bahwa setiap detail dalam penampilan Anda dapat menjadi cerminan dari kepribadian dan gaya Anda. Oleh karena itu, kami selalu berusaha untuk menyediakan produk-produk yang tidak hanya indah secara visual, tetapi juga berkualitas tinggi dan nyaman digunakan sehari-hari.
+            
+            Dengan berbagai pilihan warna, desain, dan motif yang beragam, kami yakin Anda akan menemukan sesuatu yang sesuai dengan selera dan gaya pribadi Anda. Selamat berbelanja di toko online kami dan jadikan aksesori dari manik-manik kami sebagai bagian dari gaya Anda yang unik dan kreatif!.</p>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>IF YOU ORDER </h2>
+    <form id="orderForm">
+        <!-- Mengubah input nomor pesanan menjadi readonly -->
+        <label for="order_number">No Orderan:</label>
+        <input type="text" id="order_number" name="order_number" readonly>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Mengubah label dan input nama pesanan menjadi kolom pilihan -->
+        <label for="pilihan" style="width: 100px;">Pilihan:</label>
+        <select id="pilihan" name="pilihan" style="width: calc(100% - 120px);" required>
+            <option value="">Pilih Pilihan</option>
+            <option value="Cincin Beads Cherry Set lucu Korean Style Handmade By Hay.Ag!">Cincin Beads Cherry Set lucu Korean Style Handmade By Hay.Ag!</option>
+            <option value="Gelang Beads Bracelet Red Deisy Flower Aesthetic By Hay.Ag!">Gelang Beads Bracelet Red Deisy Flower Aesthetic By Hay.Ag!</option>
+            <option value="Phone Strap Gantungan Hp Kpop Cute Stray Kids By Hay.Ag!">Phone Strap Gantungan Hp Kpop Cute Stray Kids By Hay.Ag!</option>
+            <!-- Tambahkan opsi lainnya jika diperlukan -->
+        </select>
+
+        <label for="Qty" style="width: 100px;">Jumlah Pesanan:</label>
+        <input type="number" id="Qty" name="Qty" style="width: calc(100% - 120px);" required>
+
+        <!-- Menambahkan tombol "Send Pesanan" -->
+        <!-- Mengarahkan tombol ke aplikasi WhatsApp -->
+        <a href="#" id="sendOrder" class="btn">Send Pesanan</a>
+    </form>
+</section>
+
+<script>
+    // Fungsi untuk mendapatkan format tanggal dan jam saat ini (YYYYMMDD-HHmmss)
+    function getCurrentDateTime() {
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+        const day = String(currentDate.getDate()).padStart(2, '0');
+        const hours = String(currentDate.getHours()).padStart(2, '0');
+        const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+        const seconds = String(currentDate.getSeconds()).padStart(2, '0');
+
+        return `${year}${month}${day}-${hours}${minutes}${seconds}`;
+    }
+
+    // Mendapatkan input nomor pesanan dan mengisinya dengan tanggal dan jam saat ini
+    const orderNumberInput = document.getElementById('order_number');
+    orderNumberInput.value = getCurrentDateTime();
+
+    // Menambahkan event listener untuk tombol "Send Pesanan"
+    document.getElementById('sendOrder').addEventListener('click', function() {
+        // Ganti nomor WhatsApp dan pesan sesuai kebutuhan
+        const phoneNumber = '6283142435970'; // Ganti dengan nomor WhatsApp tujuan
+        const message = `Halo! Saya ingin melakukan pesanan. Nomor Order: ${orderNumberInput.value}, Nama: ${document.getElementById('name').value}, Pilihan: ${document.getElementById('pilihan').value}, Jumlah Pesanan: ${document.getElementById('Qty').value}`;
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        // Buka link WhatsApp
+        window.open(whatsappLink, '_blank');
+    });
+</script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Hey.Ag!<br> Shopee : agnihlmh </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

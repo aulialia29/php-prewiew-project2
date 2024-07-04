@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+nav {
+    background-color: #87ceeb;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section Styling */
+#hero {
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.hero-image {
+    width: 250px;
+    height: 250px; /* Membuat gambar persegi */
+    margin-bottom: 10px;
+    object-fit: cover; /* Memastikan gambar terpotong sesuai ukuran persegi */
+    border-radius: 5px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p,
+.hero-content h1,
+.hero-content p {
+    color: black; /* Mengubah warna teks menjadi hitam */
+}
+
+.contact-info a {
+    color: black; /* Mengubah warna link menjadi hitam */
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#products {
+    background-color: #f4f4f4;
+}
+
+.product {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, 
+textarea,
+select {
+    width: calc(100% - 22px); /* Untuk mengakomodasi border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
